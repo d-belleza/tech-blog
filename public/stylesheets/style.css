@@ -33,18 +33,42 @@
     line-height: 1.25;
   }
   
+  h2 a:visited {
+    color: var(--tertiary);
+  }
+  
+  h2 a {
+    color: var(--primary);
+  }
+  
   main {
     margin: 20px auto;
     width: 94%;
+  }
+  
+  a {
+    text-decoration: none;
   }
   
   p {
     font-size: 1.2rem;
   }
   
-   .btn {
+  input {
+      width: 100%;
+      border: 1px solid #ccc;
+      background: #FFF;
+      margin: 0 0 5px;
+      padding: 10px;
+  }
+  
+  .card-header h2 {
+    color: var(--primary);
+  }
+  
+  .btn {
     font-size: 1.3rem;
-    text-decoration:none;
+    text-decoration: none;
     padding: 6px 5px;
     width: 100%;
     display: block;
@@ -58,7 +82,7 @@
     transform: translate(-1px, -1px);
   }
   
-   .btn:hover {
+  .btn:hover {
     color: var(--primary);
     background-color: var(--tertiary);
     transform: translate(0, 0);
@@ -69,27 +93,22 @@
     display: inline;
   }
   
-  .btn-back {
-    border-radius: var(--border-radius);
-    color: var(--primary);
-    border: none;
-    outline: none;
-    background-color: var(--light-dark);
-    box-shadow: 3px 3px var(--secondary);
-    transform: translate(-1px, -1px);
-    display: inline-block;
-    width: auto;
-    margin-top: 20px;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 1.2rem;
+  .li-inline {
+    display: inline;
   }
   
-   .btn-back:hover {
+  .navbar {
+    width: 100%;
+    position: fixed;
+    background-color: var(--dark);
+  }
+  
+  .nav-item {
+    margin: 0 40px;
+  }
+  
+  .nav-item a {
     color: var(--primary);
-    background-color: var(--tertiary);
-    transform: translate(0, 0);
-    box-shadow: 2px 2px var(--dark);
   }
   
   .hero {
@@ -112,9 +131,12 @@
     box-shadow: 6px 5px var(--light-dark);
   }
   
+  .app-title a {
+    color: var(--dark);
+  }
+  
   .list-group {
-    padding: 0;
-    list-style: none;
+    padding: 1%;
   }
   
   .list-item {
@@ -130,19 +152,14 @@
     background-color: var(--dark);
   }
   
-  .status-icon {
-    padding: 2px 5px;
-    margin: 0 5px;
-    background-color: rgba(255,255,255, 1);
+  .footer a {
+    display: inline-block;
+    padding: 1em;
+    margin-bottom: .5em;
+    background-color: var(--dark);
+    color: var(--primary);
     border-radius: var(--border-radius);
-  }
-  
-  .icon-danger {
-    color: rgb(255, 70, 70);
-  }
-  
-  .icon-success {
-    color: rgb(29, 153, 255);
+    text-decoration: none;
   }
   
   /* CARDS */
@@ -155,12 +172,12 @@
   .card-header {
     color: var(--primary);
     background-color: var(--dark);
-    padding: 2.5%;
-    border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+    padding: 1%;
+    border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
   }
   
   .card-body {
-    padding: 2.5%;
+    padding: 1%;
   }
   
   /* FORM */
@@ -177,7 +194,7 @@
   
   .form-input {
     width: 100%;
-    padding: 3%;
+    padding: 1%;
     margin: 5px 0;
     font-size: 1.2rem;
     border: 2px solid var(--light-dark);
@@ -197,7 +214,6 @@
   .text-uppercase {
     text-transform: uppercase;
   }
-  
   
   /* FLEX CONTENT */
   .flex-row {
@@ -220,7 +236,7 @@
   }
   
   .justify-flex-start {
-    justify-content: flex-start
+    justify-content: flex-start;
   }
   
   .justify-flex-end {
@@ -345,7 +361,6 @@
       flex: 0 0 100%;
     }
   }
-  
   
   /* col-md */
   @media screen and (min-width: 768px) {
@@ -499,6 +514,3 @@
       flex: 0 0 100%;
     }
   }
-  
-  
-  

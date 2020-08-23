@@ -15,12 +15,12 @@
     <header class="hero">
         <nav>
             <ul class="flex-row">
-                <li>Home</li>
-                <li>Dashboard</li>
+                <li class="li-inline nav-item"><a href="/">Home</a></li>
+                <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
                 {{#if loggedIn}}
-                <li>Logout</li>
+                <li class="li-inline nav-item"><a href="#" id="logout">Logout</a></li>
                 {{else}}
-                <li>Login</li>
+                <li class="li-inline nav-item"><a href="/login">Login</a></li>
                 {{/if}}
             </ul>
         </nav>
@@ -34,6 +34,9 @@
     <footer class="flex-row justify-center">
         &copy; David Belleza
     </footer>
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}} 
 </body>
 </html>
 
