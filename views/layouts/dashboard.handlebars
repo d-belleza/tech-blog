@@ -17,14 +17,10 @@
             <ul class="flex-row">
                 <li class="li-inline nav-item"><a href="/">Home</a></li>
                 <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
-                {{#if loggedIn}}
                 <li class="li-inline nav-item"><a href="#" id="logout">Logout</a></li>
-                {{else}}
-                <li class="li-inline nav-item"><a href="/login">Login</a></li>
-                {{/if}}
             </ul>
         </nav>
-        <h1 class="app-title">The Tech Blog</h1>
+        <h1 class="app-title">Your Dashboard</h1>
     </header>
 
     <main class="col-auto">
@@ -32,11 +28,11 @@
     </main>
 
     <footer class="flex-row justify-center">
-        <p>&copy; David Belleza</p>
+        <a href="/dashboard/new">New Post</a>
+        <h3>&copy; David Belleza</h3>
     </footer>
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
-    {{/if}} 
+    {{/if}}
 </body>
 </html>
-
