@@ -13,14 +13,13 @@ const sequelize = require("./config/connection");
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sess = {
     secret: 'Super secret secret',
-    cookie: {},
+    // set cookie timeout to 1 hour
+    cookie: { maxAge: 3600000},
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
       db: sequelize
     }),
-    // add session expiration to 1 month
-    maxAge: Date.now() + (30 * 86400 * 1000)
 };
 
 app.use(session(sess));
