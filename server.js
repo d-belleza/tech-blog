@@ -18,7 +18,9 @@ const sess = {
     saveUninitialized: true,
     store: new SequelizeStore({
       db: sequelize
-    })
+    }),
+    // add session expiration to 1 month
+    maxAge: Date.now() + (30 * 86400 * 1000)
 };
 
 app.use(session(sess));
